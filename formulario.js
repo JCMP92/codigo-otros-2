@@ -27,12 +27,7 @@ formulario.onsubmit = function (e) {
   }
 };
 
-var botonBorrar = document.createElement('button');
-botonBorrar.textContent = 'Eliminar invitado';
-botonBorrar.id = 'boton-borrar';
-var corteLinea = document.createElement('br');
-document.body.appendChild(corteLinea);
-document.body.appendChild(botonBorrar);
+//Eliminé código que agregaba un botón de Eliminar, que no funcionaba por estar fuera de una tarjete de invitados
 
 function agregarInvitado(nombre, edad, nacionalidad) {
   if (nacionalidad === 'ar') {
@@ -51,14 +46,7 @@ function agregarInvitado(nombre, edad, nacionalidad) {
   elementoLista.classList.add('elemento-lista');
   lista.appendChild(elementoLista);
 
-  var spanNombre = document.createElement('span');
-  var inputNombre = document.createElement('input');
-  var espacio = document.createElement('br');
-  spanNombre.textContent = 'Nombre: ';
-  inputNombre.value = nombre;
-  elementoLista.appendChild(spanNombre);
-  elementoLista.appendChild(inputNombre);
-  elementoLista.appendChild(espacio);
+  //Borré código duplicado de creación de tarjeta de invitados---------------------------------------------------
 
   function crearElemento(descripcion, valor) {
     var spanNombre = document.createElement('span');
